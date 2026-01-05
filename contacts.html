@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - НЕ МОЛЧИ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">🗣️</div>
+                <div>
+                    <h1>НЕ МОЛЧИ</h1>
+                    <p class="logo-subtitle">мобильная медиашкола</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="program.html">Программа</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Контакты</h1>
+                <p>Свяжитесь с нами или приезжайте на занятия</p>
+            </div>
+        </section>
+
+        <section class="contacts-full">
+            <div class="container">
+                <div class="contacts-grid-full">
+                    <div class="contact-form-section">
+                        <h2>Форма обратной связи</h2>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Ваше имя *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" name="agreement" required>
+                                    Я согласен на обработку персональных данных
+                                </label>
+                            </div>
+                            <button type="submit" class="btn">Отправить сообщение</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info-section">
+                        <h2>Наши контакты</h2>
+                        <div class="contact-details">
+                            <div class="contact-item-large">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h3>Телефон</h3>
+                                    <p>+7 (XXX) XXX-XX-XX</p>
+                                    <p class="contact-note">Пн-Пт с 9:00 до 18:00</p>
+                                </div>
+                            </div>
+                            <div class="contact-item-large">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>info@nemolchi.ru</p>
+                                    <p class="contact-note">Отвечаем в течение 24 часов</p>
+                                </div>
+                            </div>
+                            <div class="contact-item-large">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>Где мы работаем</h3>
+                                    <p>Мобильные занятия проходят в интернатах и детских домах Москвы и Московской области</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3>Учреждения, где проходят занятия:</h3>
+                        <ul class="institutions-list">
+                            <li>Интернат №5 для детей с нарушениями речи</li>
+                            <li>Детский дом "Надежда"</li>
+                            <li>Центр реабилитации "Будущее"</li>
+                            <li>Школа-интернат №12</li>
+                            <li>Социальный приют "Доверие"</li>
+                        </ul>
+                        
+                        <div class="social-section">
+                            <h3>Мы в соцсетях</h3>
+                            <div class="social-links-large">
+                                <a href="https://vk.com/club235171057" target="_blank" class="social-btn vk">
+                                    <i class="fab fa-vk"></i> ВКонтакте
+                                </a>
+                                <a href="https://telegram.org" target="_blank" class="social-btn tg">
+                                    <i class="fab fa-telegram"></i> Telegram
+                                </a>
+                                <a href="https://youtube.com" target="_blank" class="social-btn yt">
+                                    <i class="fab fa-youtube"></i> YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-section">
+                    <h2>Карта районов работы</h2>
+                    <div class="map-placeholder">
+                        <div class="map-content">
+                            <div class="map-point" style="top: 30%; left: 40%;">
+                                <div class="map-marker">📍</div>
+                                <div class="map-tooltip">Интернат №5</div>
+                            </div>
+                            <div class="map-point" style="top: 50%; left: 60%;">
+                                <div class="map-marker">📍</div>
+                                <div class="map-tooltip">Детский дом "Надежда"</div>
+                            </div>
+                            <div class="map-point" style="top: 70%; left: 35%;">
+                                <div class="map-marker">📍</div>
+                                <div class="map-tooltip">Центр реабилитации</div>
+                            </div>
+                        </div>
+                        <p class="map-note">Наши мобильные команды работают в этих районах Москвы и области</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>НЕ МОЛЧИ</h3>
+                    <p>Мобильная медиашкола для детей из специализированных учреждений</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Главная</a>
+                    <a href="about.html">О нас</a>
+                    <a href="program.html">Программа</a>
+                    <a href="news.html">Новости</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://vk.com/club235171057" target="_blank" class="social-link">
+                        <i class="fab fa-vk"></i> Группа ВКонтакте
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2024 Проект "НЕ МОЛЧИ". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Собираем данные формы
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+                
+                // Здесь обычно отправка на сервер
+                // fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) })
+                
+                // Пока просто показываем сообщение
+                alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>

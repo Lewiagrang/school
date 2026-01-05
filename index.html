@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>НЕ МОЛЧИ - Мобильная медиашкола</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">🗣️</div>
+                <div>
+                    <h1>НЕ МОЛЧИ</h1>
+                    <p class="logo-subtitle">мобильная медиашкола</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="program.html">Программа</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Мир услышит каждого!</h2>
+                <p class="hero-subtitle">Развитие речи и коммуникации у детей с нарушениями через психологию и игровые методы</p>
+                <a href="program.html" class="btn">Узнать о программе</a>
+            </div>
+            <div class="hero-image">
+                <div class="circle-img"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О проекте -->
+    <section class="about-short">
+        <div class="container">
+            <h2>О проекте</h2>
+            <p>Мобильная медиашкола "НЕ МОЛЧИ" помогает детям из специализированных учреждений развивать речь, коммуникативные навыки и творческие способности через современные медиатехнологии, психологическую поддержку и игровые методы.</p>
+            <a href="about.html" class="btn btn-secondary">Подробнее о нас</a>
+        </div>
+    </section>
+
+    <!-- Форматы занятий -->
+    <section class="formats">
+        <div class="container">
+            <h2>Форматы занятий</h2>
+            <div class="formats-grid">
+                <div class="format-card">
+                    <div class="format-icon">🎮</div>
+                    <h3>Игры</h3>
+                    <p>Интерактивные развивающие игры для улучшения коммуникации</p>
+                </div>
+                <div class="format-card">
+                    <div class="format-icon">📓</div>
+                    <h3>Дневники</h3>
+                    <p>Ведение личных дневников для выражения мыслей и эмоций</p>
+                </div>
+                <div class="format-card">
+                    <div class="format-icon">📖</div>
+                    <h3>Истории детей</h3>
+                    <p>Создание и рассказывание личных историй</p>
+                </div>
+                <div class="format-card">
+                    <div class="format-icon">💬</div>
+                    <h3>Психологическая поддержка</h3>
+                    <p>Индивидуальные и групповые занятия с психологами</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="reviews">
+        <div class="container">
+            <h2>Истории детей</h2>
+            <div class="reviews-carousel">
+                <div class="review-card">
+                    <div class="review-image" style="background-color: #ffd6cc;"></div>
+                    <div class="review-content">
+                        <p>"Я научился рассказывать истории о своих мечтах. Теперь я не боюсь говорить!"</p>
+                        <span class="review-author">Максим, 10 лет</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-image" style="background-color: #cce7ff;"></div>
+                    <div class="review-content">
+                        <p>"Мне нравятся наши игры с микрофоном. Я чувствую себя журналистом!"</p>
+                        <span class="review-author">Анна, 12 лет</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-image" style="background-color: #d4edda;"></div>
+                    <div class="review-content">
+                        <p>"Теперь я могу лучше объяснить, что чувствую. Это помогает мне дружить"</p>
+                        <span class="review-author">Даниил, 9 лет</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Последние новости -->
+    <section class="news-preview">
+        <div class="container">
+            <h2>Последние новости</h2>
+            <div id="vk-news-preview" class="news-grid">
+                <!-- 2 последние новости будут загружены через JavaScript -->
+                <div class="loading">Загрузка новостей...</div>
+            </div>
+            <div class="news-link">
+                <a href="news.html" class="btn">Все новости</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>НЕ МОЛЧИ</h3>
+                    <p>Мобильная медиашкола для детей из специализированных учреждений</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Главная</a>
+                    <a href="about.html">О нас</a>
+                    <a href="program.html">Программа</a>
+                    <a href="news.html">Новости</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://vk.com/club235171057" target="_blank" class="social-link">
+                        <i class="fab fa-vk"></i> Группа ВКонтакте
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2024 Проект "НЕ МОЛЧИ". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="vk-news.js"></script>
+    <script>
+        // Загружаем только 2 последние новости на главной
+        document.addEventListener('DOMContentLoaded', function() {
+            loadVKNewsPreview(2);
+        });
+    </script>
+</body>
+</html>

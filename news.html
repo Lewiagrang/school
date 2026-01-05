@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - НЕ МОЛЧИ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">🗣️</div>
+                <div>
+                    <h1>НЕ МОЛЧИ</h1>
+                    <p class="logo-subtitle">мобильная медиашкола</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="program.html">Программа</a></li>
+                    <li><a href="news.html" class="active">Новости</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Новости и события</h1>
+                <p>Следите за жизнью нашей медиашколы</p>
+            </div>
+        </section>
+
+        <section class="all-news">
+            <div class="container">
+                <div class="news-controls">
+                    <button id="refresh-news" class="btn">
+                        <i class="fas fa-sync-alt"></i> Обновить новости
+                    </button>
+                    <div class="news-count">
+                        Новости загружены из группы ВКонтакте
+                    </div>
+                </div>
+                
+                <div id="vk-news-all" class="news-grid-full">
+                    <!-- Все новости будут загружены через JavaScript -->
+                    <div class="loading">Загрузка новостей из группы ВКонтакте...</div>
+                </div>
+                
+                <div class="vk-direct-link">
+                    <a href="https://vk.com/club235171057" target="_blank" class="btn vk-btn">
+                        <i class="fab fa-vk"></i> Перейти в группу ВКонтакте
+                    </a>
+                    <p class="vk-note">Больше новостей, фото и видео в нашей официальной группе</p>
+                </div>
+                
+                <div class="photo-gallery">
+                    <h2>Фотогалерея</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" style="background-color: #ffd6cc;">
+                            <div class="gallery-label">Занятие по сторителлингу</div>
+                        </div>
+                        <div class="gallery-item" style="background-color: #cce7ff;">
+                            <div class="gallery-label">Мастер-класс по видео</div>
+                        </div>
+                        <div class="gallery-item" style="background-color: #d4edda;">
+                            <div class="gallery-label">Выставка детских работ</div>
+                        </div>
+                        <div class="gallery-item" style="background-color: #fff3cd;">
+                            <div class="gallery-label">Игровая терапия</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>НЕ МОЛЧИ</h3>
+                    <p>Мобильная медиашкола для детей из специализированных учреждений</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Главная</a>
+                    <a href="about.html">О нас</a>
+                    <a href="program.html">Программа</a>
+                    <a href="news.html">Новости</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://vk.com/club235171057" target="_blank" class="social-link">
+                        <i class="fab fa-vk"></i> Группа ВКонтакте
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2024 Проект "НЕ МОЛЧИ". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="vk-news.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Загружаем все новости
+            loadVKNewsAll();
+            
+            // Кнопка обновления новостей
+            document.getElementById('refresh-news').addEventListener('click', function() {
+                loadVKNewsAll();
+                this.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i> Загрузка...';
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-sync-alt"></i> Обновить новости';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
