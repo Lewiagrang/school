@@ -10,6 +10,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <style>
+        /* Стили для галереи (дополнительно к основным) */
+        .gallery-section {
+            padding: 4rem 0;
+            background-color: #f9f9f9;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -40,66 +68,94 @@
         <section class="page-hero">
             <div class="container">
                 <h1>О нашей медиашколе</h1>
-                <p>Узнайте больше о нашей миссии, ценностях и команде</p>
+                <p>Медиашкола речи и ораторского искусства «Не молчи» - инклюзивное пространство для всех детей</p>
             </div>
         </section>
 
         <section class="about-details">
             <div class="container">
                 <div class="about-content">
+                    <h2>О проекте</h2>
+                    <p>«Не молчи» — это медиашкола, где проводятся занятия по дисциплинам «ораторское искусство» и «основы медиа» с бережным отношением к каждому участнику. Проект вырос из идеи дать голос тем, кого чаще всего не слышат: детям с особыми образовательными потребностями, подросткам из уязвимых семей, а также всем, кто хочет научиться уверенно говорить и быть услышанным.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Новая секция с фотогалереей (все 8 изображений) -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <h2>Наши моменты</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="assets/image/1.jpg" alt="Занятие в медиашколе"></div>
+                    <div class="gallery-item"><img src="assets/image/2.jpg" alt="Ребята записывают подкаст"></div>
+                    <div class="gallery-item"><img src="assets/image/3.jpg" alt="Игра на занятии"></div>
+                    <div class="gallery-item"><img src="assets/image/4.jpg" alt="Выступление"></div>
+                    <div class="gallery-item"><img src="assets/image/5.jpg" alt="Творческая мастерская"></div>
+                    <div class="gallery-item"><img src="assets/image/6.jpg" alt="Дружная команда"></div>
+                    <div class="gallery-item"><img src="assets/image/7.jpg" alt="Работа с микрофоном"></div>
+                    <div class="gallery-item"><img src="assets/image/8.jpg" alt="Радость творчества"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Продолжение основного контента -->
+        <section class="about-details">
+            <div class="container">
+                <div class="about-content">
                     <h2>Наша миссия</h2>
-                    <p>Мы создаем инклюзивное пространство, где каждый ребенок, независимо от особенностей развития, может найти свой голос и научиться выражать себя через современные медиатехнологии.</p>
-                    
-                    <h2>Что мы делаем</h2>
-                    <p>Проект "НЕ МОЛЧИ" — это мобильная медиашкола, которая приезжает в специализированные учреждения (интернаты, детские дома, центры реабилитации) и проводит занятия по развитию речи и коммуникативных навыков.</p>
+                    <p>Помогать детям и взрослым находить свой голос, преодолевать страх публичных выступлений и учиться говорить так, чтобы их слушали и слышали. Мы создаем инклюзивное пространство, где дети с ОВЗ и их сверстники без особенностей развития учатся говорить уверенно, ясно и свободно, не боясь сцены.</p>
                     
                     <div class="values-grid">
                         <div class="value-card">
-                            <div class="value-icon">🎯</div>
-                            <h3>Цель</h3>
-                            <p>Помочь детям с нарушениями развития найти свой голос и уверенность в общении</p>
+                            <div class="value-icon">🎤</div>
+                            <h3>Инклюзивность</h3>
+                            <p>Создание среды, где каждый ребенок, независимо от особенностей развития, может найти свой голос</p>
                         </div>
                         <div class="value-card">
                             <div class="value-icon">❤️</div>
-                            <h3>Подход</h3>
-                            <p>Индивидуальный подход к каждому ребенку с учетом его особенностей и потребностей</p>
+                            <h3>Бережный подход</h3>
+                            <p>Индивидуальный подход к каждому участнику с учетом его особенностей и потребностей</p>
                         </div>
                         <div class="value-card">
-                            <div class="value-icon">🤝</div>
-                            <h3>Сообщество</h3>
-                            <p>Создание поддерживающего сообщества детей, педагогов и волонтеров</p>
+                            <div class="value-icon">🌟</div>
+                            <h3>Развитие через творчество</h3>
+                            <p>Акцент на психоэмоциональном благополучии, поддержке самооценки и социализации</p>
                         </div>
                     </div>
                     
-                    <h2>Наша команда</h2>
-                    <p>Наша команда состоит из опытных специалистов, которые любят свою работу и верят в потенциал каждого ребенка:</p>
+                    <h2>Для кого наша медиашкола</h2>
                     
                     <div class="team-grid">
                         <div class="team-card">
                             <div class="team-photo" style="background-color: #ffd6cc;"></div>
-                            <h3>Анна Петрова</h3>
-                            <p class="team-role">Основатель проекта, педагог-дефектолог</p>
-                            <p>15 лет опыта работы с детьми с ОВЗ</p>
+                            <h3>Дети с ОВЗ</h3>
+                            <p class="team-role">Основная аудитория</p>
+                            <p>Кому нужна мягкая, адаптированная среда для развития речи и коммуникативных навыков</p>
                         </div>
                         <div class="team-card">
                             <div class="team-photo" style="background-color: #cce7ff;"></div>
-                            <h3>Михаил Смирнов</h3>
-                            <p class="team-role">Медиапедагог, журналист</p>
-                            <p>Специалист по сторителлингу и радиожурналистике</p>
+                            <h3>Дети и подростки</h3>
+                            <p class="team-role">Без особенностей развития</p>
+                            <p>Которые хотят улучшить речь, научиться выступать и работать на публику</p>
                         </div>
                         <div class="team-card">
                             <div class="team-photo" style="background-color: #d4edda;"></div>
-                            <h3>Елена Козлова</h3>
-                            <p class="team-role">Детский психолог</p>
-                            <p>Специализируется на арт-терапии и игровых методах</p>
+                            <h3>Взрослые</h3>
+                            <p class="team-role">Сопровождающие и педагоги</p>
+                            <p>Стремящиеся уверенно чувствовать себя в общении и во время публичных выступлений</p>
                         </div>
                         <div class="team-card">
                             <div class="team-photo" style="background-color: #fff3cd;"></div>
-                            <h3>Игорь Волков</h3>
-                            <p class="team-role">Волонтер-координатор</p>
-                            <p>Организует выезды и взаимодействие с учреждениями</p>
+                            <h3>Все желающие</h3>
+                            <p class="team-role">Кто хочет быть услышанным</p>
+                            <p>Научиться говорить уверенно, ясно и свободно, не боясь сцены и публики</p>
                         </div>
                     </div>
+                    
+                    <h2>Чему мы учим</h2>
+                    <p>На занятиях воспитанники учатся постановке дыхания, осваивают сценическую речь, работают с текстом, учатся строить высказывания для выступлений на сцене и создания подкастов. Через игры, тренинги и медиапроекты в виде подкастов и коротких роликов дети развивают внимание, память, воображение, командную работу и уверенность в себе.</p>
+                    
+                    <p>Медиашкола делает акцент не только на технике речи, но и на психоэмоциональном благополучии, поддержке самооценки и социализации через творчество, совместные проекты и безопасную коммуникацию.</p>
                 </div>
             </div>
         </section>

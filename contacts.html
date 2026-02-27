@@ -47,9 +47,21 @@
         <section class="contacts-full">
             <div class="container">
                 <div class="contacts-grid-full">
+                    <!-- Форма обратной связи -->
                     <div class="contact-form-section">
                         <h2>Форма обратной связи</h2>
                         <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="contact-type">Цель обращения *</label>
+                                <select id="contact-type" name="contact-type" required>
+                                    <option value="" disabled selected>Выберите вариант</option>
+                                    <option value="parent">Записать ребенка на занятия</option>
+                                    <option value="institution">Пригласить медиашколу в учреждение</option>
+                                    <option value="volunteer">Стать волонтером</option>
+                                    <option value="partner">Сотрудничество / Партнерство</option>
+                                    <option value="question">Задать вопрос</option>
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label for="name">Ваше имя *</label>
                                 <input type="text" id="name" name="name" required>
@@ -59,31 +71,38 @@
                                 <input type="email" id="email" name="email" required>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Телефон</label>
-                                <input type="tel" id="phone" name="phone">
+                                <label for="phone">Телефон *</label>
+                                <input type="tel" id="phone" name="phone" required>
                             </div>
                             <div class="form-group">
                                 <label for="message">Сообщение *</label>
                                 <textarea id="message" name="message" rows="5" required></textarea>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group form-group-checkbox">
                                 <label>
                                     <input type="checkbox" name="agreement" required>
                                     Я согласен на обработку персональных данных
+                                </label>
+                            </div>
+                            <div class="form-group form-group-checkbox">
+                                <label>
+                                    <input type="checkbox" name="newsletter">
+                                    Я хочу получать информацию о новых наборах и событиях медиашколы
                                 </label>
                             </div>
                             <button type="submit" class="btn">Отправить сообщение</button>
                         </form>
                     </div>
                     
+                    <!-- Контактная информация -->
                     <div class="contact-info-section">
                         <h2>Наши контакты</h2>
                         <div class="contact-details">
                             <div class="contact-item-large">
                                 <i class="fas fa-phone"></i>
                                 <div>
-                                    <h3>Телефон</h3>
-                                    <p>+7 (XXX) XXX-XX-XX</p>
+                                    <h3>Телефон / WhatsApp</h3>
+                                    <p>+7 (902) 932-04-62</p>
                                     <p class="contact-note">Пн-Пт с 9:00 до 18:00</p>
                                 </div>
                             </div>
@@ -91,7 +110,7 @@
                                 <i class="fas fa-envelope"></i>
                                 <div>
                                     <h3>Email</h3>
-                                    <p>info@nemolchi.ru</p>
+                                    <p>ITSrina24@yandex.ru</p>
                                     <p class="contact-note">Отвечаем в течение 24 часов</p>
                                 </div>
                             </div>
@@ -99,56 +118,64 @@
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
                                     <h3>Где мы работаем</h3>
-                                    <p>Мобильные занятия проходят в интернатах и детских домах Москвы и Московской области</p>
+                                    <p>Мобильные занятия проходят в интернатах и детских центрах Калуги и Калужской области</p>
+                                </div>
+                            </div>
+                            <div class="contact-item-large">
+                                <i class="fab fa-telegram"></i>
+                                <div>
+                                    <h3>Telegram</h3>
+                                    <p>@nemolchi_mediaschool</p>
+                                    <p class="contact-note">Напишите нам в Telegram</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <h3>Учреждения, где проходят занятия:</h3>
+                        <h3>Учреждения в Калуге и области, где проходят занятия:</h3>
                         <ul class="institutions-list">
-                            <li>Интернат №5 для детей с нарушениями речи</li>
-                            <li>Детский дом "Надежда"</li>
-                            <li>Центр реабилитации "Будущее"</li>
-                            <li>Школа-интернат №12</li>
-                            <li>Социальный приют "Доверие"</li>
+                            <li>Калужская специальная (коррекционная) школа-интернат №1</li>
+                            <li>Центр содействия семейному воспитанию "Берега"</li>
+                            <li>Социально-реабилитационный центр для несовершеннолетних "Надежда"</li>
+                            <li>Калужский областной центр психолого-педагогической реабилитации и коррекции</li>
+                            <li>Детский дом "Гнёздышко"</li>
                         </ul>
                         
                         <div class="social-section">
-                            <h3>Мы в соцсетях</h3>
+                            <h3>Мы в соцсетях и мессенджерах</h3>
                             <div class="social-links-large">
                                 <a href="https://vk.com/club235171057" target="_blank" class="social-btn vk">
                                     <i class="fab fa-vk"></i> ВКонтакте
                                 </a>
-                                <a href="https://telegram.org" target="_blank" class="social-btn tg">
+                                <a href="https://t.me/nemolchi_mediaschool" target="_blank" class="social-btn tg">
                                     <i class="fab fa-telegram"></i> Telegram
                                 </a>
-                                <a href="https://youtube.com" target="_blank" class="social-btn yt">
-                                    <i class="fab fa-youtube"></i> YouTube
+                                <a href="https://wa.me/79029320462" target="_blank" class="social-btn wa">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Блок с Яндекс.Картой (замените src на свой код конструктора) -->
                 <div class="map-section">
-                    <h2>Карта районов работы</h2>
-                    <div class="map-placeholder">
-                        <div class="map-content">
-                            <div class="map-point" style="top: 30%; left: 40%;">
-                                <div class="map-marker">📍</div>
-                                <div class="map-tooltip">Интернат №5</div>
-                            </div>
-                            <div class="map-point" style="top: 50%; left: 60%;">
-                                <div class="map-marker">📍</div>
-                                <div class="map-tooltip">Детский дом "Надежда"</div>
-                            </div>
-                            <div class="map-point" style="top: 70%; left: 35%;">
-                                <div class="map-marker">📍</div>
-                                <div class="map-tooltip">Центр реабилитации</div>
-                            </div>
+                    <h2>Мы находимся в Калуге</h2>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3Aваш_уникальный_код&amp;source=constructor" 
+                            width="100%" 
+                            height="450" 
+                            frameborder="0"
+                            style="border-radius: 12px; border: 1px solid #e0e0e0;"
+                            title="Местоположение медиашколы 'Не Молчи' в Калуге">
+                        </iframe>
+                        
+                        <div class="map-fallback">
+                            <p><strong>Адрес в Калуге:</strong> ул. Ленина, 1 (пример)</p>
+                            <p><a href="https://yandex.ru/maps/org/медиашкола_не_молчи/123456789/" target="_blank">Открыть в Яндекс.Картах</a></p>
                         </div>
-                        <p class="map-note">Наши мобильные команды работают в этих районах Москвы и области</p>
                     </div>
+                    <p class="map-note">Наши мобильные команды работают в этих районах Калуги и области</p>
                 </div>
             </div>
         </section>
@@ -181,25 +208,117 @@
     </footer>
 
     <script src="main.js"></script>
+    <!-- Скрипт отправки формы в Telegram -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contact-form');
-            
-            contactForm.addEventListener('submit', function(e) {
+        (function() {
+            const TELEGRAM_BOT_TOKEN = '8627908985:AAGHCZ6ntqcqYwFkHSxzosJhpDRbvvV6mOA';
+            const TELEGRAM_CHAT_ID   = '1562710760';
+
+            const form = document.getElementById('contact-form');
+
+            // Соответствие кодов цели русским названиям
+            const purposeMap = {
+                'parent': 'Записать ребенка на занятия',
+                'institution': 'Пригласить медиашколу в учреждение',
+                'volunteer': 'Стать волонтером',
+                'partner': 'Сотрудничество / Партнерство',
+                'question': 'Задать вопрос'
+            };
+
+            // Функция для экранирования HTML-спецсимволов
+            function escapeHtml(unsafe) {
+                return unsafe
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+            }
+
+            async function sendToTelegram(formData) {
+                // Получаем русское название цели
+                const purposeText = purposeMap[formData['contact-type']] || formData['contact-type'];
+
+                // Экранируем поля, которые могут содержать спецсимволы
+                const escapedData = {
+                    purpose: escapeHtml(purposeText),
+                    name: escapeHtml(formData.name),
+                    email: escapeHtml(formData.email),
+                    phone: escapeHtml(formData.phone),
+                    message: escapeHtml(formData.message),
+                    newsletter: formData.newsletter ? 'Да' : 'Нет'
+                };
+
+                const message = `
+📩 <b>Новое обращение с сайта</b>
+
+<b>Цель:</b> ${escapedData.purpose}
+<b>Имя:</b> ${escapedData.name}
+<b>Email:</b> ${escapedData.email}
+<b>Телефон:</b> ${escapedData.phone}
+<b>Сообщение:</b> ${escapedData.message}
+<b>Подписка на новости:</b> ${escapedData.newsletter}
+                `.trim();
+
+                if (!message) {
+                    throw new Error('Сообщение не может быть пустым');
+                }
+
+                console.log('Отправляемое сообщение:', message);
+
+                const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                });
+
+                return response.json();
+            }
+
+            form.addEventListener('submit', async function(e) {
                 e.preventDefault();
-                
-                // Собираем данные формы
-                const formData = new FormData(this);
-                const data = Object.fromEntries(formData);
-                
-                // Здесь обычно отправка на сервер
-                // fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) })
-                
-                // Пока просто показываем сообщение
-                alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
-                contactForm.reset();
+
+                const formData = {
+                    'contact-type': document.getElementById('contact-type').value,
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    message: document.getElementById('message').value,
+                    newsletter: document.querySelector('input[name="newsletter"]').checked
+                };
+
+                if (!formData.name || !formData.email || !formData.phone || !formData.message) {
+                    alert('Пожалуйста, заполните все обязательные поля');
+                    return;
+                }
+
+                const submitBtn = form.querySelector('button[type="submit"]');
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Отправка...';
+
+                try {
+                    const result = await sendToTelegram(formData);
+                    if (result.ok) {
+                        alert('✅ Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.');
+                        form.reset();
+                    } else {
+                        throw new Error(result.description || 'Ошибка отправки');
+                    }
+                } catch (error) {
+                    console.error('Ошибка:', error);
+                    alert('❌ Не удалось отправить сообщение. Попробуйте позже или напишите нам в Telegram.');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Отправить сообщение';
+                }
             });
-        });
+        })();
     </script>
 </body>
 </html>

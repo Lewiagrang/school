@@ -44,48 +44,23 @@
             </div>
         </section>
 
-        <section class="all-news">
-            <div class="container">
-                <div class="news-controls">
-                    <button id="refresh-news" class="btn">
-                        <i class="fas fa-sync-alt"></i> Обновить новости
-                    </button>
-                    <div class="news-count">
-                        Новости загружены из группы ВКонтакте
-                    </div>
-                </div>
-                
-                <div id="vk-news-all" class="news-grid-full">
-                    <!-- Все новости будут загружены через JavaScript -->
-                    <div class="loading">Загрузка новостей из группы ВКонтакте...</div>
-                </div>
-                
-                <div class="vk-direct-link">
-                    <a href="https://vk.com/club235171057" target="_blank" class="btn vk-btn">
-                        <i class="fab fa-vk"></i> Перейти в группу ВКонтакте
-                    </a>
-                    <p class="vk-note">Больше новостей, фото и видео в нашей официальной группе</p>
-                </div>
-                
-                <div class="photo-gallery">
-                    <h2>Фотогалерея</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item" style="background-color: #ffd6cc;">
-                            <div class="gallery-label">Занятие по сторителлингу</div>
-                        </div>
-                        <div class="gallery-item" style="background-color: #cce7ff;">
-                            <div class="gallery-label">Мастер-класс по видео</div>
-                        </div>
-                        <div class="gallery-item" style="background-color: #d4edda;">
-                            <div class="gallery-label">Выставка детских работ</div>
-                        </div>
-                        <div class="gallery-item" style="background-color: #fff3cd;">
-                            <div class="gallery-label">Игровая терапия</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="all-news">
+    <div class="container">
+        <div class="news-header">
+            <h2><i class="fab fa-vk"></i> Новости из нашей группы ВКонтакте</h2>
+            <button id="refresh-news" class="refresh-btn">
+                <i class="fas fa-sync-alt"></i> Обновить
+            </button>
+        </div>
+        
+        <!-- Виджет будет вставлен сюда -->
+        <div id="vk-news-all"></div>
+        
+        <div class="photo-gallery">
+            <!-- Ваша фотогалерея -->
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
@@ -131,5 +106,27 @@
             });
         });
     </script>
+    <script>
+    // Переопределяем загрузку виджета
+    document.addEventListener('DOMContentLoaded', function() {
+        // Удаляем старый скрипт загрузки ВК
+        if (typeof loadVKNewsAll !== 'undefined') {
+            // Переопределяем функцию
+            window.loadVKNewsAll = function() {
+                // Используем адаптивную версию
+                if (typeof createAdaptiveVKWidget !== 'undefined') {
+                    createAdaptiveVKWidget();
+                }
+            };
+        }
+        
+        // Загружаем фикс ширины
+        setTimeout(function() {
+            if (typeof fixVKWidgetWidth !== 'undefined') {
+                fixVKWidgetWidth();
+            }
+        }, 3000);
+    });
+</script>
 </body>
 </html>
